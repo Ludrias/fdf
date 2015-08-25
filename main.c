@@ -31,7 +31,7 @@ char	**read_file_map(char *file)
 	return (ft_strsplit(content, '\n'));
 }
 
-int		**ft_converttable_chartoint(char **table_temp, int *nbline, int *nbcol)
+int		**ft_convertt_chartoint(char **table_temp, int *nbline, int *nbcol)
 {
 	int		i;
 	int 	j;
