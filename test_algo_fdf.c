@@ -55,3 +55,4 @@ void	tracage_segment_Bresenham_entier(coordonne_x_gauche, coordonne_y_gauche, co
 		coordonne_x++;
 	}
 }
+
