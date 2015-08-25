@@ -22,6 +22,7 @@ void	tracage_segment_simple (coordonne_x_gauche, coordonne_y_gauche, coordonne_x
 		coordonne_y += moyenne_coordonne;
 		coordonne_x++;
 	}
+	return;
 }
 
 void	tracage_segment_Bresenham_entier(coordonne_x_gauche, coordonne_y_gauche, coordonne_x_droite, coordonne_y_droite)
@@ -38,9 +39,9 @@ void	tracage_segment_Bresenham_entier(coordonne_x_gauche, coordonne_y_gauche, co
 	coordonne_y = coordonne_y_gauche;
 	coordonne_x_millieu = coordonne_x_droite - coordonne_x_gauche;
 	coordonne_y_millieu = coordonne_y_droite - coordonne_y_gauche;
-	incrementation_est = 2 * coordonne_y_millieu;
-	incrementation_nordest = 2* (coordonne_y_millieu - coordonne_x_millieu);
-	moyenne_coordonne_double = 2 * coordonne_y_millieu / coordonne_x_millieu;
+	incrementation_est = coordonne_y_millieu << 1;
+	incrementation_nordest = (coordonne_y_millieu - coordonne_x_millieu) << 1;
+	moyenne_coordonne_double = (coordonne_y_millieu << 1) - coordonne_x_millieu;
 
 	while (coordonne_x <= coordonne_x_droite)
 	{
